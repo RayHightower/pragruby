@@ -20,7 +20,16 @@ puts "\n\nThe game started on #{start_time.strftime("%A %m/%d/%Y at%l:%M%p")}"
 
 puts "\n**** Let's keep 'em separated. ****\n"
 
+def say_hello(name="generic", health = 100)
+  "I'm #{name.capitalize} with a health of #{health}."
+end
+  
+puts say_hello("larry", 60)
+puts say_hello("curly", 125)
+puts say_hello("moe")
+puts say_hello("shemp", 90)
 
+puts "\n**** Let's keep 'em separated. ****\n"
 
 player = %w["larry", "curly", "moe"]
 health = %w[60, 85, 129]
