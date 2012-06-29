@@ -19,9 +19,13 @@ puts "#{player4.capitalize.ljust(40,'.')} #{health4} health"
 puts "\n\nThe game started on #{start_time.strftime("%A %m/%d/%Y at%l:%M%p")}"
 
 puts "\n**** Let's keep 'em separated. ****\n"
+def fmt_time
+  current_time = Time.new
+  formatted_time = current_time.strftime("%H:%M:%S")
+end
 
 def say_hello(name="generic", health = 100)
-  "I'm #{name.capitalize} with a health of #{health}."
+  "I'm #{name.capitalize} with a health of #{health} as of #{fmt_time}."
 end
   
 puts say_hello("larry", 60)
