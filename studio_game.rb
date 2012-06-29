@@ -9,10 +9,14 @@ health2 = 125
 health3 = 100
 health4 = 90
 
+start_time = Time.new
+
 puts "#{player1.capitalize} has a health of #{health1}."
 puts "#{player2.upcase} has a health of #{health2}."
 puts "#{player3.capitalize} has a health of #{health3}.".center(50,'*')
 puts "#{player4.capitalize.ljust(40,'.')} #{health4} health"
+
+puts "\n\nThe game started on #{start_time.strftime("%A %m/%d/%Y at%l:%M%p")}"
 
 puts "\n**** Let's keep 'em separated. ****\n"
 
