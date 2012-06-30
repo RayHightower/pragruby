@@ -29,6 +29,14 @@ end
 
 class Game
 
+  def add_player
+    
+  end
+
+  def play_game
+    
+  end
+
 end
 
 
