@@ -1,7 +1,5 @@
 class Player
 
-  # attr_reader :name, :health
-  # attr_writer :name, :health
   attr_accessor :name, :health
   
   def initialize(name, health=100)
