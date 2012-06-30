@@ -27,28 +27,25 @@ class Player
 
 end
 
-
 player1 = Player.new("moe")
-puts player1
-
 player2 = Player.new("larry", 60)
-puts player2
-
 player3 = Player.new("curly", 125)
-puts player3
-
-player3.blam
-puts player3
-
-player3.w00t
-puts player3
 
 puts "\n\nBegin Exercise Eight ********"
 
 player2 = Player.new("larry", 60)
-puts player2.name
-player2.name = "Lawrence"
-puts player2.name
-puts player2.health
-puts player2.score
-puts player2
+
+puts "\n\nBegin Exercise Nine ********"
+
+players = [player1, player2, player3]
+
+puts "There are #{players.size} players in the game."
+
+index = 0
+players.each do
+  player = players[index]
+  puts "I'm #{player.name} with a health of #{player.health} and a #{player.score} score."
+  index += 1
+end
+
+
