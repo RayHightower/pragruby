@@ -21,15 +21,16 @@ class Player
     @score = @health + @name.length
   end
 
-  def countem
-    puts "There are #{self.size} players in the game."
-  end
-
   def to_s
     return "\nI\'m #{@name} with a health of #{@health} and a #{score} score."
   end
 
 end
+
+class Game
+
+end
+
 
 player1 = Player.new("moe")
 player2 = Player.new("larry", 60)
