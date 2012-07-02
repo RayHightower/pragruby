@@ -33,30 +33,10 @@ class Game
     
   end
 
-  def play_game
+  def play
     
   end
 
 end
-
-
-player1 = Player.new("moe")
-player2 = Player.new("larry", 60)
-player3 = Player.new("curly", 125)
-
-puts "\n\nBegin Exercise Eight ********"
-
-player2 = Player.new("larry", 60)
-
-puts "\n\nBegin Exercise Nine ********"
-
-players = [player1, player2, player3]
-
-
-index = 0
-players.each do |player|
-  puts player
-end
-
 
 
