@@ -39,4 +39,14 @@ class Game
 
 end
 
+knuckleheads = Game.new("Knuckleheads")
+knuckleheads.add_player(player1)
+knuckleheads.add_player(player2)
+knuckleheads.add_player(player3)
+knuckleheads.play
 
+# Expected output:
+# There are 3 players in Knuckleheads: 
+# I'm Moe with a health of 100 and a 103 score.
+# I'm Larry with a health of 60 and a 65 score.
+# I'm Curly with a health of 125 and a 130 score.
