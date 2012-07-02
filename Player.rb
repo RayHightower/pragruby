@@ -63,10 +63,6 @@ player1 = Player.new("moe")
 player2 = Player.new("larry", 60)
 player3 = Player.new("curly", 125)
 
-# puts player1
-# puts player2
-# puts player3
-
 knuckleheads = Game.new("Knuckleheads")
 knuckleheads.add_player(player1)
 knuckleheads.add_player(player2)
@@ -75,8 +71,3 @@ knuckleheads.play
 
 knuckleheads.show_game_status
 
-# Expected output:
-# There are 3 players in Knuckleheads: 
-# I'm Moe with a health of 100 and a 103 score.
-# I'm Larry with a health of 60 and a 65 score.
-# I'm Curly with a health of 125 and a 130 score.
