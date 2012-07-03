@@ -26,6 +26,9 @@ class Player
     return "I\'m #{@name} with a health of #{@health} and a #{score} score."
   end
 
+  def strong?  # RSpec allows some syntactic sugar w/predicate methods.
+    @health > 100    
+  end
 end
 
 if __FILE__ == $0
