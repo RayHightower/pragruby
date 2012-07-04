@@ -1,3 +1,6 @@
+require_relative './spinner'
+require_relative './player'
+
 class Game
 
   attr_reader :title
@@ -5,6 +8,7 @@ class Game
   def initialize(title)
     @title = title
     @players = []
+    @spinner = Spinner.new
   end
 
   def add_player(player)
@@ -17,8 +21,9 @@ class Game
 
   def play
     show_game_status
-    @spinner.roll
-
+    decider = @spinner.roll
+    @player.w00t if decider >= 5
+    @player.blam if decider <= 2
   end
 
   def show_game_status
