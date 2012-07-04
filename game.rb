@@ -17,10 +17,8 @@ class Game
 
   def play
     show_game_status
-    20.times do
-      @players.sample.w00t
-      @players.sample.blam
-    end
+    @spinner.roll
+
   end
 
   def show_game_status

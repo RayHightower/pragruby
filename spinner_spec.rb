@@ -5,6 +5,6 @@ describe Spinner do
     @spinner = Spinner.new
   end
 
-  it 'should create a die of six sides'
+  it 'should create a spinner of six possible values'
 
 end
