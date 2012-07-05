@@ -1,5 +1,6 @@
 require_relative './spinner'
 require_relative './player'
+require_relative './game_turn'
 
 class Game
 
@@ -21,14 +22,7 @@ class Game
 
   def play
     @players.each do |player|
-      number_spun = @spinner.spin
-      if number_spun >= 5
-        player.w00t
-      elsif number_spun <= 2
-        player.blam
-      else
-        puts "\n*** #{player.name} was skipped."
-      end
+      GameTurn.take_turn
     end
   end
 
