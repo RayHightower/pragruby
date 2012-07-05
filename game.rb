@@ -52,7 +52,7 @@ class Game
     sorted_players = @players.sort
     puts "\n\n"
     sorted_players.each do |player|
-      puts "#{player.name} ... #{player.score}"
+      puts "#{player.name} #{player.score.to_s.rjust(20, '.')}"
     end 
   end
 end
