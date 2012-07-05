@@ -62,11 +62,23 @@ even_nums = numbers.select { |n| n.even? } # idiomatic Ruby!
 puts "\n\n\neven_nums\n"
 puts even_nums
 
+odd_nums = numbers.reject { |n| n.even? } # idiomatic Ruby!
+puts "\n\n\nodd_nums (using .reject)\n"
+puts odd_nums
+
 evens, odds = numbers.partition { |n| n.even? } # idiomatic Ruby!
 puts "\n\n\nevens\n"
 puts evens
 puts "\n\n\nodds\n"
 puts odds
+
+reduction = numbers.reduce { |sum, n| sum + n } # idiomatic Ruby!
+puts "\n\n\nreduction\n"
+puts reduction
+
+reduction = numbers.reduce(:+) # idiomatic Ruby! Reduce is a synonym for inject.
+puts "\n\n\nreduction (with symbol)\n"
+puts reduction
 
 
 
