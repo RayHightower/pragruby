@@ -19,9 +19,12 @@ class Game
     puts @players 
   end
 
-  def play
-    @players.each do |player|
-      GameTurn.take_turn(player)
+  def play(rounds=5)
+    1.upto(rounds) do |round|
+      puts "This is round #{round}"
+      @players.each do |player|
+        GameTurn.take_turn(player)
+      end
     end
   end
 
