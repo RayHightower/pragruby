@@ -1,6 +1,6 @@
-module TreasureTrove
+Treasure = Struct.new(:name, :points)
 
-  Treasure = Struct.new(:name, :points)
+module TreasureTrove
 
   TREASURES = [
     Treasure.new(:pie, 5),
