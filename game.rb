@@ -33,4 +33,25 @@ class Game
     show_players
   end
 
+  def print_stats
+    strong_players, weak_players = @players.partition {|player| player.strong?}
+
+    puts "\n\n#{strong_players.size} strong players\n"
+    strong_players.each do |player|
+      puts "#{player.name} (#{player.health})"
+    end
+
+    puts "\n\n#{weak_players.size} weak players\n"
+    weak_players.each do |player|
+      puts "#{player.name} (#{player.health})"
+    end
+    puts "\n\n"
+  end
+
+  def print_high_scores
+    ranking = @players.score.sort
+    ranking.each do |player|
+      puts "#{player.name} ... #{player.score}"
+    end 
+  end
 end

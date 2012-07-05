@@ -12,6 +12,8 @@ knuckleheads.add_player(player3)
 knuckleheads.play
 
 knuckleheads.show_game_status
+knuckleheads.print_stats
+knuckleheads.print_high_scores
 
 player1 = Player.new("simon")
 player2 = Player.new("alvin", 60)
@@ -24,3 +26,5 @@ chipmunks.add_player(player3)
 chipmunks.play
 
 chipmunks.show_game_status
+chipmunks.print_stats
+chipmunks.print_high_scores
