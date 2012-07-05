@@ -50,8 +50,11 @@ class Game
 
   def print_high_scores
     ranking = @players.score.sort
-    ranking.each do |player|
-      puts "#{player.name} ... #{player.score}"
-    end 
+    puts ranking
+    puts "\n\n"
+
+    # ranking.each do |player|
+    #   puts "#{player.name} ... #{player.score}"
+    # end 
   end
 end
