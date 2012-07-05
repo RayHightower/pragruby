@@ -21,9 +21,16 @@ class Game
 
   def play
     show_game_status
-    decider = @spinner.roll
-    @player.w00t if decider >= 5
-    @player.blam if decider <= 2
+    @players.each do |player|
+      number_spun = @spinner.spin
+      if number_spun >= 5
+        player.w00t
+      elsif number_spun <= 2
+        player.blam
+      else
+        puts "#{player} was skipped"
+      end
+    end
   end
 
   def show_game_status

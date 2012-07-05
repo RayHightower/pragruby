@@ -6,8 +6,8 @@ describe Player do
     before do
       @player = Player.new("hercules", 150)
     end
-    
-    # RSpec allows some syntactic sugar w/predicate methods.
+
+    # RSpec allows some syntactic sugar w/predicate methods. strong?
     it "should be a player with strong health" do
       @player.should be_strong
     end

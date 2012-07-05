@@ -1,6 +1,6 @@
 class Spinner
 
-  def roll
+  def spin
     5
   end
 
