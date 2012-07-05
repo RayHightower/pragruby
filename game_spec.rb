@@ -21,7 +21,7 @@ describe Game do
     end
 
     it "does nothing when the number is medium" do
-      @spinner = Spinner.any_instance.stub(:spin).and_return(2)
+      @spinner = Spinner.any_instance.stub(:spin).and_return(4)
       @game.play
       @player.health.should == @initial_health
     end
@@ -29,7 +29,7 @@ describe Game do
     it "blams the player when the number is low" do
       @spinner = Spinner.any_instance.stub(:spin).and_return(2)
       @game.play
-      @player.health.should == @initial_health
+      @player.health.should == @initial_health - 10
     end
   end
 end
