@@ -42,3 +42,16 @@ puts morebooks.pop
 puts "\nThe complete array: #{morebooks}"
 
 puts "morebooks = nil" if morebooks == nil
+
+puts "\n\n\n*************\n"
+20.times { |iteration| puts "This is iteration #{iteration}."}
+
+puts "\n\n\n*************\n"
+1.upto(20) { |iteration| puts "This is iteration #{iteration}."}
+
+puts "\n\n\n*************\n"
+numbers = (1..15).to_a
+puts numbers
+
+
+
