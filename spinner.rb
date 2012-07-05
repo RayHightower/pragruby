@@ -1,7 +1,9 @@
 class Spinner
 
+  attr_reader :number
+
   def spin
-    rand(1..6)
+    @number = rand(1..6)
   end
 
 end
