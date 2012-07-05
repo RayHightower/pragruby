@@ -5,12 +5,12 @@ describe Spinner do
     @spinner = Spinner.new
   end
 
-  it 'should roll an integer greater than or equal to one' do
-    @spinner.roll.should >= 1
+  it 'should spin an integer greater than or equal to one' do
+    @spinner.spin.should >= 1
   end
 
-  it 'should roll an integer less than or equal to six' do
-    @spinner.roll.should <= 6
+  it 'should spin an integer less than or equal to six' do
+    @spinner.spin.should <= 6
   end
 
 end
