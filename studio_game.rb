@@ -1,6 +1,12 @@
 require_relative './player'
 require_relative './game'
 
+@treasure = TresureTrove::TREASURES
+puts "There are #{@treasure.size} treasures to be found:"
+@treasure.each do |treasure|
+  puts "A #{treasure.name} is worth #{treasure.points} points"
+end
+
 player1 = Player.new("moe")
 player2 = Player.new("larry", 60)
 player3 = Player.new("curly", 125)

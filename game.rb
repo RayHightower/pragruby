@@ -1,6 +1,7 @@
 require_relative './spinner'
 require_relative './player'
 require_relative './game_turn'
+require_relative './treasure_trove'
 
 class Game
 
@@ -59,4 +60,9 @@ class Game
   def print_name_and_health(player)
     puts "#{player.name} #{player.health.rjust(20,'.')}"
   end
+
+  def print_treasures
+    puts TreasureTrove::TREASURES
+  end
+
 end
