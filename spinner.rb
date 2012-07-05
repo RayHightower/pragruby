@@ -1,7 +1,7 @@
 class Spinner
 
   def spin
-    5
+    rand(5) + 1
   end
 
 end
