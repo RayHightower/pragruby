@@ -62,5 +62,12 @@ even_nums = numbers.select { |n| n.even? } # idiomatic Ruby!
 puts "\n\n\neven_nums\n"
 puts even_nums
 
+evens, odds = numbers.partition { |n| n.even? } # idiomatic Ruby!
+puts "\n\n\nevens\n"
+puts evens
+puts "\n\n\nodds\n"
+puts odds
+
+
 
 
