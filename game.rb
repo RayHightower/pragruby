@@ -6,7 +6,7 @@ class Game
   attr_reader :title
 
   def initialize(title)
-    @title = title
+    @title = title.capitalize
     @players = []
     @spinner = Spinner.new
   end
@@ -20,7 +20,6 @@ class Game
   end
 
   def play
-    show_game_status
     @players.each do |player|
       number_spun = @spinner.spin
       if number_spun >= 5
@@ -28,7 +27,7 @@ class Game
       elsif number_spun <= 2
         player.blam
       else
-        puts "#{player} was skipped"
+        puts "\n*** #{player.name} was skipped."
       end
     end
   end
