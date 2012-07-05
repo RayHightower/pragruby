@@ -38,12 +38,12 @@ class Game
 
     puts "\n\n#{strong_players.size} strong players\n"
     strong_players.each do |player|
-      puts "#{player.name} (#{player.health})"
+      print_name_and_health
     end
 
     puts "\n\n#{weak_players.size} weak players\n"
     weak_players.each do |player|
-      puts "#{player.name} (#{player.health})"
+      print_name_and_health(player)
     end
     puts "\n\n"
   end
@@ -52,7 +52,11 @@ class Game
     sorted_players = @players.sort
     puts "\n\n"
     sorted_players.each do |player|
-      puts "#{player.name} #{player.score.to_s.rjust(20, '.')}"
+      print_name_and_score
     end 
+  end
+
+  def print_name_and_health(player)
+    puts "#{player.name} #{player.health.rjust(20,'.')}"
   end
 end
