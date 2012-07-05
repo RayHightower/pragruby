@@ -53,10 +53,14 @@ puts "\n\n\nnumbers\n"
 numbers = (1..15).to_a
 puts numbers
 
-bigger_than = numbers.select { |n| n > 5 }
+bigger_than = numbers.select { |n| n > 5 } # idiomatic Ruby!
 puts "\n\n\nbigger_than\n"
 puts bigger_than
 
+
+even_nums = numbers.select { |n| n.even? } # idiomatic Ruby!
+puts "\n\n\neven_nums\n"
+puts even_nums
 
 
 
