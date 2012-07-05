@@ -21,6 +21,7 @@ class Game
   end
 
   def play(rounds=5)
+    print_treasures
     1.upto(rounds) do |round|
       puts "This is round #{round}"
       @players.each do |player|
@@ -39,7 +40,7 @@ class Game
 
     puts "\n\n#{strong_players.size} strong players\n"
     strong_players.each do |player|
-      print_name_and_health
+      print_name_and_health(player)
     end
 
     puts "\n\n#{weak_players.size} weak players\n"
@@ -62,7 +63,11 @@ class Game
   end
 
   def print_treasures
-    puts TreasureTrove::TREASURES
+    @treasure = TreasureTrove::TREASURES
+    puts "There are #{@treasure.size} treasures to be found:"
+    @treasure.each do |treasure|
+      puts "A #{treasure.name} is worth #{treasure.points} points"
+    end
   end
 
 end
