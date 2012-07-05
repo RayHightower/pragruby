@@ -29,6 +29,10 @@ class Player
   def strong?  # RSpec allows some syntactic sugar w/predicate methods.
     @health > 100    
   end
+
+  def <=>(other_player)
+    other_player.score <=> @score
+  end
 end
 
 if __FILE__ == $0

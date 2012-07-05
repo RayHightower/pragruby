@@ -49,12 +49,10 @@ class Game
   end
 
   def print_high_scores
-    sorted_players = @players.score.sort
-    puts ranking
+    sorted_players = @players.sort
     puts "\n\n"
-
-    # ranking.each do |player|
-    #   puts "#{player.name} ... #{player.score}"
-    # end 
+    sorted_players.each do |player|
+      puts "#{player.name} ... #{player.score}"
+    end 
   end
 end
