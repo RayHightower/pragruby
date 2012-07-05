@@ -81,5 +81,10 @@ puts "\n\n\nreduction (with symbol)\n"
 puts reduction
 
 
+puts "\n\n\n*********** Now Experimenting with Sorting ***************\n\n"
+scout_law = %w(trustworthy loyal helpful friendly courteous kind obedient cheerful thrifty brave clean reverent)
+scout_law.each {|law| puts law.capitalize }
+puts "\n\n"
+scout_law.sort.each {|law| puts law.capitalize }
 
 
