@@ -22,7 +22,7 @@ class Game
 
   def play
     @players.each do |player|
-      GameTurn.take_turn
+      GameTurn.take_turn(player)
     end
   end
 
