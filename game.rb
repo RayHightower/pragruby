@@ -10,6 +10,7 @@ class Game
   def initialize(title)
     @title = title.capitalize
     @players = []
+    @treasure = TreasureTrove::TREASURES
   end
 
   def add_player(player)
@@ -54,16 +55,19 @@ class Game
     sorted_players = @players.sort
     puts "\n\n"
     sorted_players.each do |player|
-      print_name_and_score
+      print_name_and_score(player)
     end 
   end
 
+  def print_name_and_score(player)
+    puts "#{player.name} #{player.score.to_s.rjust(20,'.')}"
+  end
+
   def print_name_and_health(player)
-    puts "#{player.name} #{player.health.rjust(20,'.')}"
+    puts "#{player.name} #{player.health.to_s.rjust(20,'.')}"
   end
 
   def print_treasures
-    @treasure = TreasureTrove::TREASURES
     puts "There are #{@treasure.size} treasures to be found:"
     @treasure.each do |treasure|
       puts "A #{treasure.name} is worth #{treasure.points} points"
