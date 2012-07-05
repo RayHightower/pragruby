@@ -49,7 +49,7 @@ class Game
   end
 
   def print_high_scores
-    ranking = @players.score.sort
+    sorted_players = @players.score.sort
     puts ranking
     puts "\n\n"
 
