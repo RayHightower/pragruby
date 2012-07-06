@@ -1,5 +1,4 @@
 require_relative './player'
-require_relative './treasure_trove'
 
 describe Player do
 
@@ -31,16 +30,8 @@ describe Player do
       @initial_health = @player.health
     end
 
-    it "has a capitalized name" do
-      @player.name.should == "Geronimo"
-    end
-
     it "has an inital health" do
       @player.health.should_not == nil
-    end
-
-    it "has a string representation" do
-      @player.to_s.should == "I'm Geronimo with a health of 200 and a 208 score."
     end
 
     it "computes a score as the sum of its health and length of name" do
@@ -63,20 +54,28 @@ describe Player do
 
   end
 
-  it "computes points as the sum of all treasure points" do
-    @player.points.should == 0
+  context "dealing with treasure tracking" do
+    before do
+      @player = Player.new("imhotep", 150)
+    end
 
-    @player.found_treasure(Treasure.new(:hammer, 50))
+    it "starts with a point total of zero" do
+      @player.points.should == 0
+    end
 
-    @player.points.should == 50
+    it "computes points as the sum of all treasure points" do
+      @player.add_to_found_treasure(Treasure.new(:hammer, 50))
+      @player.points.should == 50
+    end
 
-    @player.found_treasure(Treasure.new(:crowbar, 400))
-    
-    @player.points.should == 450
-    
-    @player.found_treasure(Treasure.new(:hammer, 50))
-
-    @player.points.should == 500
+    it "computes points as the sum of all treasure points" do
+      @player.found_treasure(Treasure.new(:crowbar, 400))
+      @player.points.should == 450
+    end
+      
+    it "computes points as the sum of all treasure points" do
+      @player.found_treasure(Treasure.new(:hammer, 50))
+      @player.points.should == 500
+    end
   end
-
 end
