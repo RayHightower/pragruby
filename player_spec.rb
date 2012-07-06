@@ -49,12 +49,9 @@ describe Player do
       @player.blam
       @player.health.should == blammed_health
     end
-
-    it "should slice and dice"
-
   end
 
-  context "dealing with treasure tracking" do
+  context "treasure tracking" do
     before do
       @player = Player.new("imhotep", 150)
     end
@@ -63,18 +60,18 @@ describe Player do
       @player.points.should == 0
     end
 
-    it "computes points as the sum of all treasure points" do
+    it "adds to found treasure and computes resulting points" do
       @player.add_to_found_treasure(Treasure.new(:hammer, 50))
       @player.points.should == 50
     end
 
-    it "computes points as the sum of all treasure points" do
-      @player.found_treasure(Treasure.new(:crowbar, 400))
+    it "adds new treasure, creating keys where needed" do
+      @player.add_to_found_treasure(Treasure.new(:crowbar, 400))
       @player.points.should == 450
     end
       
-    it "computes points as the sum of all treasure points" do
-      @player.found_treasure(Treasure.new(:hammer, 50))
+    it "adds another item to the found treasurer" do
+      @player.add_to_found_treasure(Treasure.new(:hammer, 50))
       @player.points.should == 500
     end
   end
