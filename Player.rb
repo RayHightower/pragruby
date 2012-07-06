@@ -39,18 +39,18 @@ class Player
   end
 
   def add_to_found_treasure(treasure)
-    @found_treasures[treasure] += treasure.points
-    puts "#{player.name} found a #{treasure.name} worth #{treasure.points} points."
-    puts "#{player.name}'s treasures: #{@found_treasures}"
-    puts "#{player.name}'s points: #{@found_treasures.points}"
+    @found_treasures[treasure.name] += treasure.points
+    puts "#{@player.name} found a #{treasure.name} worth #{treasure.points} points."
+    puts "#{@player.name}'s treasures: #{@found_treasures}"
+    puts "#{@player.name}'s points: #{@found_treasures.points}"
   end
 
-  def found_treasure
+  def treasure_bag  # What's in the player's treasure bag?
     @found_treasures
   end
 
   def points
-    @points = @found_treasures.values.reduce(:+)
+    @found_treasures.values.reduce(:+)
   end
 end
 
