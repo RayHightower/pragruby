@@ -13,7 +13,6 @@ module GameTurn
       puts "\n*** #{player.name} was skipped."
     end
     treasure = TreasureTrove::TREASURES.sample
-    puts "#{player.name} found a #{treasure.name} worth #{treasure.points} points."
   end
 
   def get_treasure
