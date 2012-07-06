@@ -12,7 +12,7 @@ module GameTurn
     else
       puts "\n*** #{player.name} was skipped."
     end
-    treasure = TreasureTrove::TREASURES.sample
+    add_to_found_treasure(TreasureTrove::TREASURES.sample)
   end
 
   def get_treasure

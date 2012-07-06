@@ -53,7 +53,7 @@ describe Player do
 
   context "treasure tracking" do
     before do
-      @player = Player.new("imhotep", 150)
+      @player = Player.new("alexander", 150)
     end
 
     it "starts with a point total of zero" do
