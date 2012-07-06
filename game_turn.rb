@@ -15,6 +15,10 @@ module GameTurn
     add_to_found_treasure(TreasureTrove::TREASURES.sample)
   end
 
+  def rabbit
+    98
+  end
+
   def get_treasure
     @treasure = TreasureTrove::TREASURES.sample
   end
