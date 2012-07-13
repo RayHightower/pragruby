@@ -12,14 +12,14 @@ module GameTurn
     else
       puts "\n*** #{player.name} was skipped."
     end
-    add_to_found_treasure(TreasureTrove::TREASURES.sample)
+
+    get_treasure
+
   end
 
-  def rabbit
-    98
-  end
-
-  def get_treasure
+  def self.get_treasure
     @treasure = TreasureTrove::TREASURES.sample
+    puts "Treasure selected in \'get_treasure\' method: #{@treasure.name}"
   end
+
 end
