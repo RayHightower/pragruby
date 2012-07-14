@@ -13,10 +13,9 @@ describe GameTurn do
     GameTurn.take_turn(@player).should_not == nil
   end
 
-  it 'should grab a treasure item' do
-    treasure = GameTurn::get_treasure
-    treasure.should_not == nil
-  end
+#   it 'should grab a treasure item' do
+#     @treasure.name.should_not == nil
+#   end
 
 end
 
