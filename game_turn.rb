@@ -13,13 +13,11 @@ module GameTurn
       puts "\n*** #{player.name} was skipped."
     end
 
-    get_treasure
-
-    return number_spun
+    player.get_treasure
 
   end
 
-  def self.get_treasure
+  def self.get_treasure(player)
     @treasure = TreasureTrove::TREASURES.sample
     puts "Treasure selected in \'get_treasure\' method: #{@treasure.name}"
   end

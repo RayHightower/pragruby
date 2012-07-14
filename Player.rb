@@ -2,13 +2,12 @@ require_relative './treasure_trove'
 
 class Player
 
-  attr_accessor :name, :health
+  attr_accessor :name, :health, :found_treasure
   attr_reader :show, :score, :points
 
   def initialize(name, health=100)
     @name = name.capitalize
     @health = health
-    @found_treasures = Hash.new(0)
     @points = 0
   end
 
@@ -38,19 +37,28 @@ class Player
     other_player.score <=> @score
   end
 
-  def add_to_found_treasure(treasure)
-    @found_treasures[treasure.name] += treasure.points
-    puts "#{@player.name} found a #{treasure.name} worth #{treasure.points} points."
-    puts "#{@player.name}'s treasures: #{@found_treasures}"
-    puts "#{@player.name}'s points: #{@found_treasures.points}"
+  def get_treasure
+    @treasure = TreasureTrove::TREASURES.sample
+
+    if !@found_treasure 
+      @found_treasure = Hash.new(0) 
+    end
+
+    @found_treasure[@treasure.name.to_sym] += @treasure.points
+
+    puts "Treasure selected in \'get_treasure\' method: #{@treasure.name}"
   end
 
-  def treasure_bag  # What's in the player's treasure bag?
-    @found_treasures
-  end
+#   def add_to_found_treasure(treasure)
+#     @found_treasure << treasure
+#     puts "#{@player.name} found a #{treasure.name} worth #{treasure.points} points."
+#     puts "#{@player.name}'s treasures: #{@found_treasures}"
+#     puts "#{@player.name}'s points: #{@found_treasures.points}"
+#   end
 
   def points
-    @found_treasures.values.reduce(:+)
+    return 0 if !@found_treasure
+    @found_treasure.values.reduce(:+)
   end
 end
 

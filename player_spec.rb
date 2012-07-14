@@ -56,8 +56,9 @@ describe Player do
       @player = Player.new("alexander", 150)
     end
 
-    it "starts with a point total of zero" do
-      @player.points.should == 0
+    it "starts with a treasure point total of 0" do
+      player = Player.new("bartholemew")
+      player.points.should == 0
     end
 
     it "adds to found treasure and computes resulting points" do
