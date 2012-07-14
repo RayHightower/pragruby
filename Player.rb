@@ -26,7 +26,7 @@ class Player
   end
 
   def to_s
-    return "I\'m #{@name} with a health of #{@health} and a #{score} score."
+    return "I\'m #{@name} with a health of #{@health} and a #{score} score.\n#{@name}'s treasure bag contains #{treasure_bag}.\nPoints = #{points}\n\n"
   end
 
   def strong?  # RSpec allows some syntactic sugar w/predicate methods.
