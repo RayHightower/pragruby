@@ -10,7 +10,7 @@ describe GameTurn do
   end
 
   it 'should take a turn' do
-    GameTurn::take_turn(@player).should_not == nil
+    GameTurn.take_turn(@player).should_not == nil
   end
 
   it 'should grab a treasure item' do

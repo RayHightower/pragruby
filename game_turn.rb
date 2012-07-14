@@ -15,6 +15,8 @@ module GameTurn
 
     get_treasure
 
+    return number_spun
+
   end
 
   def self.get_treasure
