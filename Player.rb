@@ -49,6 +49,11 @@ class Player
     puts "Treasure selected in \'get_treasure\' method: #{@treasure.name}"
   end
 
+  def treasure_bag
+    return "empty bag" if !@found_treasure
+    @found_treasure
+  end
+
   def points
     return 0 if !@found_treasure
     @found_treasure.values.reduce(:+)
