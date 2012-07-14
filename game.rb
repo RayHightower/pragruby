@@ -6,6 +6,7 @@ require_relative './treasure_trove'
 class Game
 
   attr_reader :title
+  attr_accessor :total_game_points
 
   def initialize(title)
     @title = title.capitalize
@@ -72,6 +73,16 @@ class Game
     @treasure.each do |treasure|
       puts "A #{treasure.name} is worth #{treasure.points} points"
     end
+  end
+
+  def total_game_points
+
+    total = 0
+    
+    @players.each do |player|
+      total += player.points
+    end
+    
   end
 
 end
