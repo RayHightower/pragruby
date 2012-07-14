@@ -9,9 +9,7 @@ describe GameTurn do
     @player = Player.new("Kirk",100)
   end
 
-  it 'should take a turn' do
-    GameTurn.take_turn(@player).should_not == nil
-  end
+  it 'should take a turn' 
 
 #   it 'should grab a treasure item' do
 #     @treasure.name.should_not == nil

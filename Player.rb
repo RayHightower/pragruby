@@ -49,13 +49,6 @@ class Player
     puts "Treasure selected in \'get_treasure\' method: #{@treasure.name}"
   end
 
-#   def add_to_found_treasure(treasure)
-#     @found_treasure << treasure
-#     puts "#{@player.name} found a #{treasure.name} worth #{treasure.points} points."
-#     puts "#{@player.name}'s treasures: #{@found_treasures}"
-#     puts "#{@player.name}'s points: #{@found_treasures.points}"
-#   end
-
   def points
     return 0 if !@found_treasure
     @found_treasure.values.reduce(:+)
