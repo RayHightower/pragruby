@@ -61,19 +61,10 @@ describe Player do
       player.points.should == 0
     end
 
-    it "adds to found treasure and computes resulting points" do
-      @player.add_to_found_treasure(Treasure.new(:hammer, 50))
-      @player.points.should == 50
-    end
+    it "adds to found treasure and computes resulting points" 
 
-    it "adds new treasure, creating keys where needed" do
-      @player.add_to_found_treasure(Treasure.new(:crowbar, 400))
-      @player.points.should == 450
-    end
+    it "adds new treasure, creating keys where needed" 
       
-    it "adds another item to the found treasurer" do
-      @player.add_to_found_treasure(Treasure.new(:hammer, 50))
-      @player.points.should == 500
-    end
+    it "adds another item to the found treasurer" 
   end
 end
