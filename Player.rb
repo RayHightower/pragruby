@@ -50,7 +50,7 @@ class Player
   end
 
   def treasure_bag
-    return "empty bag" if !@found_treasure
+    return "no treasure in this bag" if !@found_treasure
     @found_treasure
   end
 
