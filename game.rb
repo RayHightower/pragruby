@@ -25,7 +25,7 @@ class Game
   def play(rounds=5)
     print_treasures
     1.upto(rounds) do |round|
-      puts "This is round #{round}"
+      puts "\n\nSTARTING ROUND #{round}"
       @players.each do |player|
         GameTurn.take_turn(player)
       end
@@ -33,19 +33,20 @@ class Game
   end
 
   def show_game_status
-    puts "There are #{@players.size} players in #{self.title}:"
+    puts "\n\nGAME STATUS\nThere are #{@players.size} players in #{self.title}:"
     show_players
   end
 
   def print_stats
     strong_players, weak_players = @players.partition {|player| player.strong?}
 
-    puts "\n\n#{strong_players.size} strong players\n"
+    puts "\nReport on Player Health"
+    puts "\n#{strong_players.size} strong players\n"
     strong_players.each do |player|
       print_name_and_health(player)
     end
 
-    puts "\n\n#{weak_players.size} weak players\n"
+    puts "\n#{weak_players.size} weak players\n"
     weak_players.each do |player|
       print_name_and_health(player)
     end
@@ -55,6 +56,7 @@ class Game
   def print_high_scores
     sorted_players = @players.sort
     puts "\n\n"
+    puts "Scores in Descending Order"
     sorted_players.each do |player|
       print_name_and_score(player)
     end 
