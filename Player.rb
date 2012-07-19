@@ -2,7 +2,7 @@ require_relative './treasure_trove'
 
 class Player
 
-  attr_accessor :name, :health, :found_treasure
+  attr_accessor :name, :health
   attr_reader :show, :score, :points
 
   def initialize(name, health=100)
