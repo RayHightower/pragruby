@@ -24,8 +24,8 @@ def cinco_times
 end
 
 def five_times
-  5.times do |counter|
-    n = counter + 1
+  1.upto 5 do |counter|
+    n = counter
     yield n
     puts "\n"
   end
