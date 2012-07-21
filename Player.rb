@@ -71,7 +71,9 @@ class Player
 
   def each_found_treasure
 
-    yield @found_treasure
+    @found_treasure.each do |key, value|
+      yield Treasure.new(key, value)
+    end
 
   end
 end

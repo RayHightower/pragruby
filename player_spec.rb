@@ -77,13 +77,13 @@ describe Player do
       end
       
       puts "\n\n+++++++ We are in player_spec.rb ++++++\n"
-      yielded.should == [{:skillet=>200, :hammer=>50, :bottle=>25}]
+#      yielded.should == [{:skillet=>200, :hammer=>50, :bottle=>25}]
 
-#       yielded.should == [
-#         Treasure.new(:skillet, 200), 
-#         Treasure.new(:hammer, 50), 
-#         Treasure.new(:bottle, 25)
-#      ]
+      yielded.should == [
+        Treasure.new(:skillet, 200), 
+        Treasure.new(:hammer, 50), 
+        Treasure.new(:bottle, 25)
+     ]
     end
 
     it "adds to found treasure and computes resulting points" 
