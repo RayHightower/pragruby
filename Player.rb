@@ -75,16 +75,6 @@ class Player
 
     yield @found_treasure
 
-#     @found_treasure.each do |n|
-#       yield n
-#     end
-
-#      stuff = Treasure.new(:skillet, 200) 
-#      yieldstuff = [
-#         Treasure.new(:skillet, 200), 
-#         Treasure.new(:hammer, 50), 
-#         Treasure.new(:bottle, 25)
-#      ]
   end
 end
 
