@@ -69,6 +69,10 @@ class Player
     return 0 if !@found_treasure
     @found_treasure.values.reduce(:+)
   end
+
+  def each_found_treasure
+    
+  end
 end
 
 if __FILE__ == $0
