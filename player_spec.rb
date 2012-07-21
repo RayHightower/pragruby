@@ -76,6 +76,8 @@ describe Player do
         yielded << treasure
       end
       
+      puts "\n\n+++++++ We are in player_spec.rb ++++++\n"
+
       yielded.should == [
         Treasure.new(:skillet, 200), 
         Treasure.new(:hammer, 50), 

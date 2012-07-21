@@ -71,7 +71,13 @@ class Player
   end
 
   def each_found_treasure
-       stuff = Treasure.new(:skillet, 200) 
+    puts "+++++++++++ In player.rb, @found_treasure is #{@found_treasure} ++++++++++++ "
+
+    @found_treasure.each do |n|
+      yield n
+    end
+
+#      stuff = Treasure.new(:skillet, 200) 
 #      yieldstuff = [
 #         Treasure.new(:skillet, 200), 
 #         Treasure.new(:hammer, 50), 
