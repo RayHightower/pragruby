@@ -57,7 +57,6 @@ class Player
 
     @found_treasure[treasure.name.to_sym] += treasure.points
 
-    puts "Treasure selected in \'get_treasure\' method: #{treasure.name}"
   end
 
   def treasure_bag
@@ -71,7 +70,6 @@ class Player
   end
 
   def each_found_treasure
-    puts "+++++++++++ In player.rb, @found_treasure is #{@found_treasure} ++++++++++++ "
 
     yield @found_treasure
 
