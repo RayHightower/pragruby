@@ -25,7 +25,9 @@ class Game
   def play(rounds=5)
     print_treasures
     1.upto(rounds) do |round|
-      yield
+
+      yield if block_given?
+
       puts "\n\nSTARTING ROUND #{round}"
       @players.each do |player|
         GameTurn.take_turn(player)
