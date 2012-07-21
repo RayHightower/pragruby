@@ -25,6 +25,7 @@ class Game
   def play(rounds=5)
     print_treasures
     1.upto(rounds) do |round|
+      yield
       puts "\n\nSTARTING ROUND #{round}"
       @players.each do |player|
         GameTurn.take_turn(player)
@@ -92,7 +93,7 @@ class Game
     @players.each do |player|
       total += player.points
     end
-    
+    return total
   end
 
 end
