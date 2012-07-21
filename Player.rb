@@ -71,11 +71,12 @@ class Player
   end
 
   def each_found_treasure
-     yieldstuff = [
-        Treasure.new(:skillet, 200), 
-        Treasure.new(:hammer, 50), 
-        Treasure.new(:bottle, 25)
-     ]
+       stuff = Treasure.new(:skillet, 200) 
+#      yieldstuff = [
+#         Treasure.new(:skillet, 200), 
+#         Treasure.new(:hammer, 50), 
+#         Treasure.new(:bottle, 25)
+#      ]
   end
 end
 
