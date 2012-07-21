@@ -49,6 +49,17 @@ class Player
     puts "Treasure selected in \'get_treasure\' method: #{@treasure.name}"
   end
 
+  def found_treasure(treasure = TreasureTrove::TREASURES.sample)
+
+    if !@found_treasure 
+      @found_treasure = Hash.new(0) 
+    end
+
+    @found_treasure[treasure.name.to_sym] += treasure.points
+
+    puts "Treasure selected in \'get_treasure\' method: #{treasure.name}"
+  end
+
   def treasure_bag
     return "no treasure in this bag" if !@found_treasure
     @found_treasure
