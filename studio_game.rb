@@ -10,12 +10,20 @@ knuckleheads.add_player(player1)
 knuckleheads.add_player(player2)
 knuckleheads.add_player(player3)
 
-puts "How many rounds do you want to play?"
-answer = gets.chomp.to_i
-puts "Enjoy your #{answer} rounds!"
+loop do
+  puts "How many rounds do you want to play?"
+  answer = gets.chomp
 
-knuckleheads.play(answer) do
-  break if knuckleheads.total_game_points >= 2000
+  case answer
+  when 'quit', 'exit'
+    break
+  else
+    answer = answer.to_i
+    puts "Enjoy your #{answer} rounds!"
+    knuckleheads.play(answer) do
+      break if knuckleheads.total_game_points >= 2000
+    end
+  end
 end
 
 
