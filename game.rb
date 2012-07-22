@@ -97,5 +97,8 @@ class Game
     end
     return total
   end
-
+  
+  def load_players(csvfile = 'players.csv')
+    
+  end
 end
