@@ -11,18 +11,17 @@ knuckleheads.add_player(player2)
 knuckleheads.add_player(player3)
 
 loop do
-  puts "How many rounds do you want to play?"
-  answer = gets.chomp
+  puts "\nSTARTING THE GAME...\nHow many rounds do you want to play?"
+  answer = gets.chomp.downcase
 
-  case answer
-  when 'quit', 'exit'
+  if answer == 'quit' || answer == 'exit'
     break
-  else
+  elsif answer.to_i > 0
     answer = answer.to_i
     puts "Enjoy your #{answer} rounds!"
-    knuckleheads.play(answer) do
-      break if knuckleheads.total_game_points >= 2000
-    end
+    knuckleheads.play(answer)
+  else
+    puts "Please enter an integer, 'quit', or 'exit'."
   end
 end
 
