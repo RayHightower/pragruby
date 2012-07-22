@@ -11,8 +11,7 @@ knuckleheads.add_player(player2)
 knuckleheads.add_player(player3)
 
 puts "How many rounds do you want to play?"
-answer = gets
-answer = answer.to_i
+answer = gets.chomp.to_i
 puts "Enjoy your #{answer} rounds!"
 
 knuckleheads.play(answer) do
