@@ -10,7 +10,12 @@ knuckleheads.add_player(player1)
 knuckleheads.add_player(player2)
 knuckleheads.add_player(player3)
 
-knuckleheads.play(15) do
+puts "How many rounds do you want to play?"
+answer = gets
+answer = answer.to_i
+puts "Enjoy your #{answer} rounds!"
+
+knuckleheads.play(answer) do
   break if knuckleheads.total_game_points >= 2000
 end
 
@@ -18,6 +23,7 @@ end
 knuckleheads.show_game_status
 knuckleheads.print_stats
 knuckleheads.print_high_scores
+
 
 # player1 = Player.new("simon")
 # player2 = Player.new("alvin", 60)
