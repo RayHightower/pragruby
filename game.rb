@@ -101,20 +101,26 @@ class Game
   def load_players(csvfile = 'players.csv')
     puts "\ncsvfile = #{csvfile}\n"
     
-    currentline = File.open(csvfile)
+    filehandle = File.open(csvfile)
     players = []
     index = 0
 
     loop do
       puts "\nindex = #{index}\n"
-      thepointer = currentline.gets
-      break if thepointer == nil
-      players[index] = thepointer.chomp
+      currentline = filehandle.gets
+      break if currentline == nil
+      players[index] = currentline.chomp
       puts "\nplayers[#{index}] = #{players[index]}\n"
       index += 1
     end
     
     puts "The players from file #{csvfile} are #{players}."
+
+    players.each do |player|
+      temparray = player.split(',')
+      entrant = Player.new(temparray[0].to_s,temparray[1].to_i)
+      add_player(entrant)
+    end
 
   end
 end

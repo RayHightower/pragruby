@@ -1,14 +1,14 @@
 require_relative './player'
 require_relative './game'
 
-player1 = Player.new("moe")
-player2 = Player.new("larry", 60)
-player3 = Player.new("curly", 125)
-
+# player1 = Player.new("moe")
+# player2 = Player.new("larry", 60)
+# player3 = Player.new("curly", 125)
+# 
 knuckleheads = Game.new("Knuckleheads")
-knuckleheads.add_player(player1)
-knuckleheads.add_player(player2)
-knuckleheads.add_player(player3)
+# knuckleheads.add_player(player1)
+# knuckleheads.add_player(player2)
+# knuckleheads.add_player(player3)
 
 loop do
   puts "\nSTARTING THE GAME...\nHow many rounds do you want to play?"
@@ -19,6 +19,7 @@ loop do
   elsif answer.to_i > 0
     answer = answer.to_i
     puts "Enjoy your #{answer} rounds!"
+    knuckleheads.load_players
     knuckleheads.play(answer)
   else
     puts "Please enter an integer, 'quit', or 'exit'."
