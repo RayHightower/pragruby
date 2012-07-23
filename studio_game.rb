@@ -12,8 +12,7 @@ knuckleheads = Game.new("Knuckleheads")
 
 playerfile = ARGV.shift
 puts "\nThe program will use the #{playerfile} file.\n"
-playerfile = 'players.csv'
-knuckleheads.load_players(playerfile)
+knuckleheads.load_players(playerfile || 'players.csv')
 
 loop do
   puts "\nSTARTING THE GAME...\nHow many rounds do you want to play?"
