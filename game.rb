@@ -106,15 +106,11 @@ class Game
     index = 0
 
     loop do
-      puts "\nindex = #{index}\n"
       currentline = filehandle.gets
       break if currentline == nil
       players[index] = currentline.chomp
-      puts "\nplayers[#{index}] = #{players[index]}\n"
       index += 1
     end
-    
-    puts "The players from file #{csvfile} are #{players}."
 
     players.each do |player|
       temparray = player.split(',')
@@ -122,5 +118,10 @@ class Game
       add_player(entrant)
     end
 
+  end
+
+  def save_high_scores(highfile = 'high_scores.txt')
+    target = File.open(highfile, 'w')
+    
   end
 end
