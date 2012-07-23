@@ -18,8 +18,10 @@ loop do
     break
   elsif answer.to_i > 0
     answer = answer.to_i
+    puts "\nWhat file of players would you like to use?\n"
+    playerfile = gets.chomp.downcase
     puts "Enjoy your #{answer} rounds!"
-    knuckleheads.load_players
+    knuckleheads.load_players(playerfile)
     knuckleheads.play(answer)
   else
     puts "Please enter an integer, 'quit', or 'exit'."
