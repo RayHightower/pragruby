@@ -121,7 +121,6 @@ class Game
   end
 
   def save_high_scores(highfile = 'high_scores.txt')
-    target = File.open(highfile, 'w')
-    
+    target = File.open(highfile, 'w') {|f| f.write(print_high_scores)}
   end
 end

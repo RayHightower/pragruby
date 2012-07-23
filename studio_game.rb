@@ -33,6 +33,7 @@ end
 knuckleheads.show_game_status
 knuckleheads.print_stats
 knuckleheads.print_high_scores
+knuckleheads.save_high_scores
 
 
 # player1 = Player.new("simon")
