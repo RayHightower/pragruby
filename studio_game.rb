@@ -10,6 +10,11 @@ knuckleheads = Game.new("Knuckleheads")
 # knuckleheads.add_player(player2)
 # knuckleheads.add_player(player3)
 
+playerfile = ARGV.shift
+puts "\nThe program will use the #{playerfile} file.\n"
+playerfile = 'players.csv'
+knuckleheads.load_players(playerfile)
+
 loop do
   puts "\nSTARTING THE GAME...\nHow many rounds do you want to play?"
   answer = gets.chomp.downcase
@@ -18,10 +23,7 @@ loop do
     break
   elsif answer.to_i > 0
     answer = answer.to_i
-    puts "\nWhat file of players would you like to use?\n"
-    playerfile = gets.chomp.downcase
     puts "Enjoy your #{answer} rounds!"
-    knuckleheads.load_players(playerfile)
     knuckleheads.play(answer)
   else
     puts "Please enter an integer, 'quit', or 'exit'."
