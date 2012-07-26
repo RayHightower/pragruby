@@ -1,3 +1,4 @@
+# Checking git health after fresh installation on Mountain Lion
 require_relative './spinner'
 require_relative './player'
 require_relative './game_turn'
