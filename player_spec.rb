@@ -91,5 +91,8 @@ describe Player do
     it "adds new treasure, creating keys where needed" 
       
     it "adds another item to the found treasurer" 
+
+    it "runs a random test to confirm that Guard is running"
+
   end
 end
