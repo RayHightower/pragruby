@@ -92,7 +92,7 @@ describe Player do
       
     it "adds another item to the found treasurer" 
 
-    it "runs a random test to confirm that Guard is running"
+    it "runs another spec specified by RTH"
 
   end
 end

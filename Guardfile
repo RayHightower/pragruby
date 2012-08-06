@@ -20,5 +20,9 @@ guard 'rspec', :version => 2 do
   # Turnip features and steps
   watch(%r{^spec/acceptance/(.+)\.feature$})
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
+
+  # watchers added by RTH on 8/5/2012
+  watch(%r{^(.+)\.rb$})                               { |m| "#{m[1]}_spec.rb" }
+  
 end
 

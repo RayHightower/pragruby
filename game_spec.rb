@@ -32,5 +32,8 @@ describe Game do
       @game.play(@number_of_rounds)
       @player.health.should == @initial_health - (10 * @number_of_rounds)
     end
+
+    it "runs guard when another spec is added"
+
   end
 end
