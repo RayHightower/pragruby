@@ -1,5 +1,5 @@
 require_relative 'player'
 
-class Clumsy < Player
+class BerserkPlayer < Player
 
 end
