@@ -3,9 +3,9 @@ require_relative 'player'
 class ClumsyPlayer < Player
 
   def found_treasure(treasure)
-    super
-    @found_treasure[treasure.name] += treasure.points/2
-    puts "#{name} found a #{treasure.name} worth #{treasure.points} points."
+    points = treasure.points/2
+    @found_treasure[treasure.name] += points
+    puts "#{name} found a #{treasure.name} worth #{points} points."
     
   end
 

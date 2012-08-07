@@ -9,6 +9,7 @@ class Player
     @name = name.capitalize
     @health = health
     @points = 0
+    @found_treasure = Hash.new(0) 
   end
 
   def w00t
