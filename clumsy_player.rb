@@ -2,15 +2,25 @@ require_relative 'player'
 
 class ClumsyPlayer < Player
 
+  def initialize(name, health, boost_factor)
+    super(name, health)
+    @boost_factor = boost_factor
+  end
+
   def found_treasure(treasure = TreasureTrove::TREASURES.sample)
     damaged_treasure = Treasure.new(treasure.name, treasure.points/2)
     super(damaged_treasure)
   end
 
+  def w00t
+    @boost_factor.times {super}
+    puts "#{self.name}'s health is #{@health}"
+  end
+
 end
 
 if __FILE__ == $0
-  clumsy = ClumsyPlayer.new("klutz")  
+  clumsy = ClumsyPlayer.new("klutz",100,10)  
   
   hammer = Treasure.new(:hammer, 50)
   clumsy.found_treasure(hammer)
@@ -24,5 +34,7 @@ if __FILE__ == $0
     puts "#{treasure.points} total #{treasure.name} points"
   end
   puts "#{clumsy.points} grand total points"
+
+  clumsy.w00t
 end
 
