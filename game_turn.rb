@@ -13,7 +13,7 @@ module GameTurn
       puts "\n*** #{player.name} was skipped."
     end
 
-    player.get_treasure
+    player.found_treasure
 
   end
 
