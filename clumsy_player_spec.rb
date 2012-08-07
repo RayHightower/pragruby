@@ -28,4 +28,9 @@ describe ClumsyPlayer do
     yielded.should == [Treasure.new(:hammer, 75), Treasure.new(:crowbar, 200)]    
   end
 
+  it "applies the boost factor as expected" do
+    @player.w00t
+    @player.health.should == 250
+  end
+
 end
