@@ -2,4 +2,33 @@ require_relative 'player'
 
 class BerserkPlayer < Player
 
+  def initialize(name,initial_health)
+    super(name,initial_health)
+    @w00t_count = 0
+  end
+
+  def berserk?
+    if @w00t_count > 5
+      true
+    else
+      false
+    end
+  end
+
+  def w00t
+    super
+    @w00t_count += 1
+
+    if self.berserk? 
+      puts "I am berserk #{self.name} and you are only making it worse!!!\n\n"
+    end
+
+  end
+
+  def blam
+    if self.berserk?
+      w00t
+    end
+  end
+
 end
