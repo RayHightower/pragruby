@@ -32,3 +32,9 @@ class BerserkPlayer < Player
   end
 
 end
+
+
+if __FILE__ == $0
+  berserker = BerserkPlayer.new("berserker", 50)
+  6.times { berserker.w00t }
+end
