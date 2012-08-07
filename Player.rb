@@ -57,6 +57,7 @@ class Player
     end
 
     @found_treasure[treasure.name.to_sym] += treasure.points
+    puts "Treasure selected in \'found_treasure\' method: #{@treasure.name}"
 
   end
 

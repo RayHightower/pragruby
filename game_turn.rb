@@ -17,7 +17,7 @@ module GameTurn
 
   end
 
-  def self.get_treasure(player)
+  def self.found_treasure(player)
     @treasure = TreasureTrove::TREASURES.sample
     puts "Treasure selected in \'get_treasure\' method: #{@treasure.name}"
   end

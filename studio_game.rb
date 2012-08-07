@@ -1,4 +1,5 @@
 require_relative './player'
+require_relative './clumsy_player'
 require_relative './game'
 
 # player1 = Player.new("moe")
@@ -13,6 +14,9 @@ knuckleheads = Game.new("Knuckleheads")
 playerfile = ARGV.shift
 puts "\nThe program will use the #{playerfile} file.\n"
 knuckleheads.load_players(playerfile || 'players.csv')
+
+player4 = ClumsyPlayer.new("klutz",105)
+knuckleheads.add_player(player4)
 
 loop do
   puts "\nSTARTING THE GAME...\nHow many rounds do you want to play?"
