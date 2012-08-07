@@ -2,8 +2,8 @@ require_relative './treasure_trove'
 
 class Player
 
-  attr_accessor :name, :health, :points
-  attr_reader :show, :score, 
+  attr_accessor :name, :health
+  attr_reader :show, :score 
 
   def initialize(name, health=100)
     @name = name.capitalize
@@ -66,9 +66,12 @@ class Player
   end
 
   def points
-    # return 0 if !@found_treasure
+    return 0 if @found_treasure.size == 0
     @points = @found_treasure.values.reduce(:+)
-    return @points
+  end
+
+  def random_stuff
+    0
   end
 
   def each_found_treasure
