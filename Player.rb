@@ -2,8 +2,8 @@ require_relative './treasure_trove'
 
 class Player
 
-  attr_accessor :name, :health
-  attr_reader :show, :score, :points
+  attr_accessor :name, :health, :points
+  attr_reader :show, :score, 
 
   def initialize(name, health=100)
     @name = name.capitalize
@@ -27,7 +27,7 @@ class Player
   end
 
   def to_s
-    return "I\'m #{@name} with a health of #{@health} and a #{score} score.\n#{@name}'s treasure bag contains #{treasure_bag}.\n#{@name}'s Grand Total Points = #{points}\n\n"
+    return "I\'m #{@name} with a health of #{@health} and a #{score} score.\n#{@name}'s treasure bag contains #{treasure_bag}.\n#{@name}'s Grand Total Points = #{@points}\n\n"
   end
 
   def strong?  # RSpec allows some syntactic sugar w/predicate methods.
@@ -66,8 +66,9 @@ class Player
   end
 
   def points
-    return 0 if !@found_treasure
-    @found_treasure.values.reduce(:+)
+    # return 0 if !@found_treasure
+    @points = @found_treasure.values.reduce(:+)
+    return @points
   end
 
   def each_found_treasure
