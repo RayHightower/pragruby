@@ -1,12 +1,12 @@
 module Playable
   
   def w00t
-    puts "\n#{self.name} got w00ted!"
+    puts "\n#{name} got w00ted!"
     @health += 15
   end
 
   def blam
-    puts "\n#{self.name} got blammed!"
+    puts "\n#{name} got blammed!"
     @health -= 10
   end
 
