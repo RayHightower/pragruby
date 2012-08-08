@@ -1,19 +1,15 @@
 require_relative 'auditable'
 
-class Spinner
+class LoadedSpinner
 
   include Auditable
 
   attr_reader :number
 
-  def initialize
-    spin
-  end
-
   def spin
-    @number = rand(1..6)
+    numbers = [1, 1, 2, 5, 6, 6]
+    @number = numbers.sample
     audit
-    @number
   end
 
 end

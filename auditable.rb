@@ -1,7 +1,7 @@
 module Auditable
 
   def audit
-    puts "Spun a #{@number} on the spinner."    
+    puts "Audit: Spun a #{self.number} on the #{self.class}."    
     @number
   end
 

@@ -16,7 +16,7 @@ playerfile = ARGV.shift
 puts "\nThe program will use the #{playerfile} file.\n"
 knuckleheads.load_players(playerfile || 'players.csv')
 
-player4 = ClumsyPlayer.new("klutz",105)
+player4 = ClumsyPlayer.new("klutz",105,5)
 player5 = BerserkPlayer.new("berserker",50)
 knuckleheads.add_player(player4)
 knuckleheads.add_player(player5)
