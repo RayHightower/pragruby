@@ -1,4 +1,8 @@
+require_relative 'auditable'
+
 class Spinner
+
+  include Auditable
 
   attr_reader :number
 
@@ -8,6 +12,7 @@ class Spinner
 
   def spin
     @number = rand(1..6)
+    self.audit
   end
 
 end
