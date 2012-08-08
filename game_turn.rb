@@ -1,10 +1,12 @@
-require_relative './spinner'
+# require_relative './spinner'
+require_relative './loaded_spinner'
 require_relative './player'
 
 module GameTurn
 
   def self.take_turn(player)
-    number_spun = Spinner.new.spin
+    # number_spun = Spinner.new.spin
+    number_spun = LoadedSpinner.new.spin
     if number_spun >= 5
       player.w00t
     elsif number_spun <= 2
