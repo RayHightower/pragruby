@@ -1,6 +1,9 @@
 require_relative './treasure_trove'
+require_relative 'playable'
 
 class Player
+
+  include Playable
 
   attr_accessor :name, :health
   attr_reader :show, :score 
@@ -12,26 +15,12 @@ class Player
     @found_treasure = Hash.new(0) 
   end
 
-  def w00t
-    puts "\n#{@name} got w00ted!"
-    @health += 15
-  end
-
-  def blam
-    puts "\n#{@name} got blammed!"
-    @health -= 10
-  end
-
   def score
     @score = @health + @name.length
   end
 
   def to_s
     return "I\'m #{@name} with a health of #{@health} and a #{score} score.\n#{@name}'s treasure bag contains #{treasure_bag}.\n#{@name}'s Grand Total Points = #{@points}\n\n"
-  end
-
-  def strong?  # RSpec allows some syntactic sugar w/predicate methods.
-    @health > 100    
   end
 
   def <=>(other_player)
