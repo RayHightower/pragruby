@@ -1,6 +1,6 @@
 # instead of Die and roll, use Spinner and spin
 #
-require_relative './game'
+require 'studio_game/game'
 
 module StudioGame
 

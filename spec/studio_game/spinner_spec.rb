@@ -1,4 +1,4 @@
-require_relative './spinner'
+require 'studio_game/spinner'
 
 module StudioGame
 
