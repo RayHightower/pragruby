@@ -1,5 +1,5 @@
 Gem::Specification.new do |s| 
-  s.name         = "PragProg Studio Game"
+  s.name         = "rth-studio"
   s.version      = "0.01"
   s.author       = "Raymond T. Hightower"
   s.email        = "rth@wisdomgroup.com"
@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.files         = Dir["{bin,lib,spec}/**/*"] + %w(LICENSE README.md)
   s.test_files    = Dir["spec/**/*"]
-  s.executables   = [ 'studio_game' ]
+  s.executables   = [ 'rth-studio' ]
 
   s.required_ruby_version = '>=1.9'
   s.add_development_dependency 'rspec'
