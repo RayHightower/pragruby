@@ -1,6 +1,6 @@
 Gem::Specification.new do |s| 
   s.name         = "rth-studio"
-  s.version      = "0.01"
+  s.version      = "0.9"
   s.author       = "Raymond T. Hightower"
   s.email        = "rth@wisdomgroup.com"
   s.homepage     = "http://wisdomgroup.com"
