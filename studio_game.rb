@@ -7,7 +7,7 @@ require_relative './game'
 # player2 = Player.new("larry", 60)
 # player3 = Player.new("curly", 125)
 # 
-knuckleheads = Game.new("Knuckleheads")
+knuckleheads = StudioGame::Game.new("Knuckleheads")
 # knuckleheads.add_player(player1)
 # knuckleheads.add_player(player2)
 # knuckleheads.add_player(player3)
@@ -16,8 +16,8 @@ playerfile = ARGV.shift
 puts "\nThe program will use the #{playerfile} file.\n"
 knuckleheads.load_players(playerfile || 'players.csv')
 
-player4 = ClumsyPlayer.new("klutz",105,5)
-player5 = BerserkPlayer.new("berserker",50)
+player4 = StudioGame::ClumsyPlayer.new("klutz",105,5)
+player5 = StudioGame::BerserkPlayer.new("berserker",50)
 knuckleheads.add_player(player4)
 knuckleheads.add_player(player5)
 
