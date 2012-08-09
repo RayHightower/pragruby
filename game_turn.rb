@@ -2,26 +2,29 @@ require_relative './spinner'
 # require_relative './loaded_spinner'
 require_relative './player'
 
-module GameTurn
+module StudioGame
 
-  def self.take_turn(player)
-    number_spun = Spinner.new.spin
-    # number_spun = LoadedSpinner.new.spin
-    if number_spun >= 5
-      player.w00t
-    elsif number_spun <= 2
-      player.blam
-    else
-      puts "\n*** #{player.name} was skipped."
+  module GameTurn
+
+    def self.take_turn(player)
+      number_spun = Spinner.new.spin
+      # number_spun = LoadedSpinner.new.spin
+      if number_spun >= 5
+        player.w00t
+      elsif number_spun <= 2
+        player.blam
+      else
+        puts "\n*** #{player.name} was skipped."
+      end
+
+      player.found_treasure
+
     end
 
-    player.found_treasure
+    def self.found_treasure(player)
+      @treasure = TreasureTrove::TREASURES.sample
+      puts "Treasure selected in \'get_treasure\' method: #{@treasure.name}"
+    end
 
   end
-
-  def self.found_treasure(player)
-    @treasure = TreasureTrove::TREASURES.sample
-    puts "Treasure selected in \'get_treasure\' method: #{@treasure.name}"
-  end
-
 end

@@ -1,16 +1,19 @@
 require_relative 'auditable'
 
-class LoadedSpinner
+module StudioGame
 
-  include Auditable
+  class LoadedSpinner
 
-  attr_reader :number
+    include Auditable
 
-  def spin
-    numbers = [1, 1, 2, 5, 6, 6]
-    @number = numbers.sample
-    audit
-    @number
+    attr_reader :number
+
+    def spin
+      numbers = [1, 1, 2, 5, 6, 6]
+      @number = numbers.sample
+      audit
+      @number
+    end
+
   end
-
 end
