@@ -1,0 +1,85 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<=>	lib/studio_game/player.rb	/^    def <=>(other_player)$/;"	f	class:StudioGame.Player
+Auditable	lib/studio_game/auditable.rb	/^  module Auditable$/;"	m	class:StudioGame
+BerserkPlayer	lib/studio_game/berserk_player.rb	/^  class BerserkPlayer < Player$/;"	c	class:StudioGame
+Calculator	sandbox/calculator.rb	/^class Calculator$/;"	c
+ClumsyPlayer	lib/studio_game/clumsy_player.rb	/^  class ClumsyPlayer < Player$/;"	c	class:StudioGame
+Game	lib/studio_game/game.rb	/^  class Game$/;"	c	class:StudioGame
+GameTurn	lib/studio_game/game_turn.rb	/^  module GameTurn$/;"	m	class:StudioGame
+LoadedSpinner	lib/studio_game/loaded_spinner.rb	/^  class LoadedSpinner$/;"	c	class:StudioGame
+Playable	lib/studio_game/playable.rb	/^  module Playable$/;"	m	class:StudioGame
+Player	lib/studio_game/player.rb	/^  class Player$/;"	c	class:StudioGame
+Spinner	lib/studio_game/spinner.rb	/^  class Spinner$/;"	c	class:StudioGame
+StudioGame	lib/studio_game/auditable.rb	/^module StudioGame$/;"	m
+StudioGame	lib/studio_game/berserk_player.rb	/^module StudioGame$/;"	m
+StudioGame	lib/studio_game/clumsy_player.rb	/^module StudioGame$/;"	m
+StudioGame	lib/studio_game/game.rb	/^module StudioGame$/;"	m
+StudioGame	lib/studio_game/game_turn.rb	/^module StudioGame$/;"	m
+StudioGame	lib/studio_game/loaded_spinner.rb	/^module StudioGame$/;"	m
+StudioGame	lib/studio_game/playable.rb	/^module StudioGame$/;"	m
+StudioGame	lib/studio_game/player.rb	/^module StudioGame$/;"	m
+StudioGame	lib/studio_game/spinner.rb	/^module StudioGame$/;"	m
+StudioGame	lib/studio_game/treasure_trove.rb	/^module StudioGame$/;"	m
+StudioGame	spec/studio_game/berserk_player_spec.rb	/^module StudioGame$/;"	m
+StudioGame	spec/studio_game/clumsy_player_spec.rb	/^module StudioGame$/;"	m
+StudioGame	spec/studio_game/game_spec.rb	/^module StudioGame$/;"	m
+StudioGame	spec/studio_game/game_turn_spec.rb	/^module StudioGame$/;"	m
+StudioGame	spec/studio_game/player_spec.rb	/^module StudioGame$/;"	m
+StudioGame	spec/studio_game/spinner_spec.rb	/^module StudioGame$/;"	m
+StudioGame	spec/studio_game/treasure_trove_spec.rb	/^module StudioGame$/;"	m
+TreasureTrove	lib/studio_game/treasure_trove.rb	/^  module TreasureTrove$/;"	m	class:StudioGame
+add	sandbox/calculator.rb	/^  def add$/;"	f	class:Calculator
+add_player	lib/studio_game/game.rb	/^    def add_player(player)$/;"	f	class:StudioGame.Game
+audit	lib/studio_game/auditable.rb	/^    def audit$/;"	f	class:StudioGame.Auditable
+berserk?	lib/studio_game/berserk_player.rb	/^    def berserk?$/;"	f	class:StudioGame.BerserkPlayer
+blam	lib/studio_game/berserk_player.rb	/^    def blam$/;"	f	class:StudioGame.BerserkPlayer
+blam	lib/studio_game/playable.rb	/^    def blam$/;"	f	class:StudioGame.Playable
+cinco_times	sandbox/iterators.rb	/^def cinco_times$/;"	f
+conversation	sandbox/iterators.rb	/^def conversation(admonition)$/;"	f
+conversation	sandbox/yieldsandbox.rb	/^def conversation$/;"	f
+convo2	sandbox/iterators.rb	/^def convo2$/;"	f
+each_found_treasure	lib/studio_game/player.rb	/^    def each_found_treasure$/;"	f	class:StudioGame.Player
+five_times	sandbox/iterators.rb	/^def five_times$/;"	f
+fmt_time	lib/studio_game/studio_game_initial.rb	/^def fmt_time$/;"	f
+found_treasure	lib/studio_game/clumsy_player.rb	/^    def found_treasure(treasure = TreasureTrove::TREASURES.sample)$/;"	f	class:StudioGame.ClumsyPlayer
+found_treasure	lib/studio_game/game_turn.rb	/^    def self.found_treasure(player)$/;"	F	class:StudioGame.GameTurn
+found_treasure	lib/studio_game/player.rb	/^    def found_treasure(treasure = TreasureTrove::TREASURES.sample)$/;"	f	class:StudioGame.Player
+initialize	lib/studio_game/berserk_player.rb	/^    def initialize(name,initial_health)$/;"	f	class:StudioGame.BerserkPlayer
+initialize	lib/studio_game/clumsy_player.rb	/^    def initialize(name, health, boost_factor)$/;"	f	class:StudioGame.ClumsyPlayer
+initialize	lib/studio_game/game.rb	/^    def initialize(title)$/;"	f	class:StudioGame.Game
+initialize	lib/studio_game/player.rb	/^    def initialize(name, health=100)$/;"	f	class:StudioGame.Player
+initialize	lib/studio_game/spinner.rb	/^    def initialize$/;"	f	class:StudioGame.Spinner
+initialize	sandbox/calculator.rb	/^  def initialize(num1, num2)$/;"	f	class:Calculator
+load_players	lib/studio_game/game.rb	/^    def load_players(csvfile = 'players.csv')$/;"	f	class:StudioGame.Game
+play	lib/studio_game/game.rb	/^    def play(rounds=5)$/;"	f	class:StudioGame.Game
+points	lib/studio_game/player.rb	/^    def points$/;"	f	class:StudioGame.Player
+print_high_scores	lib/studio_game/game.rb	/^    def print_high_scores$/;"	f	class:StudioGame.Game
+print_name_and_health	lib/studio_game/game.rb	/^    def print_name_and_health(player)$/;"	f	class:StudioGame.Game
+print_name_and_score	lib/studio_game/game.rb	/^    def print_name_and_score(player)$/;"	f	class:StudioGame.Game
+print_stats	lib/studio_game/game.rb	/^    def print_stats$/;"	f	class:StudioGame.Game
+print_treasures	lib/studio_game/game.rb	/^    def print_treasures$/;"	f	class:StudioGame.Game
+random	lib/studio_game/treasure_trove.rb	/^    def self.random$/;"	F	class:StudioGame.TreasureTrove
+random_stuff	lib/studio_game/player.rb	/^    def random_stuff$/;"	f	class:StudioGame.Player
+save_high_scores	lib/studio_game/game.rb	/^    def save_high_scores(highfile = 'high_scores.txt')$/;"	f	class:StudioGame.Game
+say_hello	lib/studio_game/studio_game_initial.rb	/^def say_hello(name="generic", health = 100)$/;"	f
+score	lib/studio_game/player.rb	/^    def score$/;"	f	class:StudioGame.Player
+show_game_status	lib/studio_game/game.rb	/^    def show_game_status$/;"	f	class:StudioGame.Game
+show_players	lib/studio_game/game.rb	/^    def show_players$/;"	f	class:StudioGame.Game
+spin	lib/studio_game/loaded_spinner.rb	/^    def spin$/;"	f	class:StudioGame.LoadedSpinner
+spin	lib/studio_game/spinner.rb	/^    def spin$/;"	f	class:StudioGame.Spinner
+strong?	lib/studio_game/playable.rb	/^    def strong?  # RSpec allows some syntactic sugar w\/predicate methods.$/;"	f	class:StudioGame.Playable
+subtract	sandbox/calculator.rb	/^  def subtract$/;"	f	class:Calculator
+take_turn	lib/studio_game/game_turn.rb	/^    def self.take_turn(player)$/;"	F	class:StudioGame.GameTurn
+to_s	lib/studio_game/player.rb	/^    def to_s$/;"	f	class:StudioGame.Player
+total_game_points	lib/studio_game/game.rb	/^    def total_game_points$/;"	f	class:StudioGame.Game
+train	sandbox/iterators.rb	/^def train$/;"	f
+treasure_bag	lib/studio_game/player.rb	/^    def treasure_bag$/;"	f	class:StudioGame.Player
+w00t	lib/studio_game/berserk_player.rb	/^    def w00t$/;"	f	class:StudioGame.BerserkPlayer
+w00t	lib/studio_game/clumsy_player.rb	/^    def w00t$/;"	f	class:StudioGame.ClumsyPlayer
+w00t	lib/studio_game/playable.rb	/^    def w00t$/;"	f	class:StudioGame.Playable
+what_yield_does	sandbox/yieldsandbox.rb	/^def what_yield_does$/;"	f
