@@ -27,6 +27,5 @@ module StudioGame
 
       @player.health.should == @initial_health + (8 * 15)
     end
-
   end
 end
