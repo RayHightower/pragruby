@@ -1,7 +1,7 @@
 module StudioGame
 
   module Playable
-    
+
     def w00t
       puts "\n#{name} got w00ted!"
       self.health += 15
@@ -13,7 +13,7 @@ module StudioGame
     end
 
     def strong?  # RSpec allows some syntactic sugar w/predicate methods.
-      self.health > 100    
+      self.health > 100
     end
 
   end

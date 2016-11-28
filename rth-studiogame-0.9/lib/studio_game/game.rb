@@ -94,16 +94,16 @@ module StudioGame
     def total_game_points
 
       total = 0
-      
+
       @players.each do |player|
         total += player.points
       end
       return total
     end
-    
+
     def load_players(csvfile = 'players.csv')
       puts "\ncsvfile = #{csvfile}\n"
-      
+
       filehandle = File.open(csvfile)
       players = []
       index = 0
@@ -126,7 +126,6 @@ module StudioGame
     def save_high_scores(highfile = 'high_scores.txt')
       target = File.open(highfile, 'w') {|f| f.write(print_high_scores)}
     end
-
   end
 end
 
