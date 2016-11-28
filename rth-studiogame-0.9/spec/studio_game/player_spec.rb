@@ -72,27 +72,27 @@ module StudioGame
         @player.found_treasure(Treasure.new(:bottle, 5))
         @player.found_treasure(Treasure.new(:bottle, 5))
         @player.found_treasure(Treasure.new(:bottle, 5))
-        
+
         yielded = []
         @player.each_found_treasure do |treasure|
           yielded << treasure
         end
-        
+
         puts "\n\n+++++++ We are in player_spec.rb ++++++\n"
   #      yielded.should == [{:skillet=>200, :hammer=>50, :bottle=>25}]
 
         yielded.should == [
-          Treasure.new(:skillet, 200), 
-          Treasure.new(:hammer, 50), 
+          Treasure.new(:skillet, 200),
+          Treasure.new(:hammer, 50),
           Treasure.new(:bottle, 25)
        ]
       end
 
-      it "adds to found treasure and computes resulting points" 
+      it "adds to found treasure and computes resulting points"
 
-      it "adds new treasure, creating keys where needed" 
-        
-      it "adds another item to the found treasurer" 
+      it "adds new treasure, creating keys where needed"
+
+      it "adds another item to the found treasurer"
 
       it "runs another spec specified by RTH"
 
