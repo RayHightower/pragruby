@@ -5,7 +5,7 @@ module StudioGame
   describe BerserkPlayer do
 
     before do
-      @initial_health = 50 
+      @initial_health = 50
       @player = BerserkPlayer.new("berserker", @initial_health)
     end
 
