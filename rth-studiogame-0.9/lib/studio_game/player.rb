@@ -7,13 +7,13 @@ module StudioGame
     include Playable
 
     attr_accessor :name, :health
-    attr_reader :show, :score 
+    attr_reader :show, :score
 
     def initialize(name, health=100)
       @name = name.capitalize
       @health = health
       @points = 0
-      @found_treasure = Hash.new(0) 
+      @found_treasure = Hash.new(0)
     end
 
     def score
@@ -30,8 +30,8 @@ module StudioGame
 
     def found_treasure(treasure = TreasureTrove::TREASURES.sample)
 
-      if !@found_treasure 
-        @found_treasure = Hash.new(0) 
+      if !@found_treasure
+        @found_treasure = Hash.new(0)
       end
 
       @found_treasure[treasure.name.to_sym] += treasure.points
