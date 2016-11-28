@@ -21,7 +21,7 @@ module StudioGame
       super
       @w00t_count += 1
 
-      if self.berserk? 
+      if self.berserk?
         puts "I am berserk #{self.name} and you are only making it worse!!!\n\n"
       end
 

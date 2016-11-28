@@ -22,7 +22,7 @@ module StudioGame
     end
 
     def show_players
-      puts @players 
+      puts @players
     end
 
     def play(rounds=5)
@@ -73,7 +73,7 @@ module StudioGame
       puts "Scores in Descending Order"
       sorted_players.each do |player|
         print_name_and_score(player)
-      end 
+      end
     end
 
     def print_name_and_score(player)
