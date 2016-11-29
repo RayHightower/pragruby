@@ -4,7 +4,7 @@ require_relative 'playable'
 module StudioGame
   class Player
 
-    include Playable
+    include Playable    # require_relative AND include. belt and suspenders.
 
     attr_accessor :name, :health
     attr_reader :show, :score
